@@ -72,9 +72,6 @@ blockquote footer {
 	width: 200px;
 	height: 200px;
 	border-radius:50%;
-	-ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
 }
 #header h1, h2, h3  {
 	margin: 0;
