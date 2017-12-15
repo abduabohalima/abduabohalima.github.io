@@ -63,6 +63,7 @@ blockquote footer {
 }
 #header {
 	text-align: center;
+	line-height: 1.2;
 }
 #header #photo {
 	float: none;
@@ -75,13 +76,8 @@ blockquote footer {
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
 }
-#header h3 {
+#header h1, h2, h3  {
 	margin: 0;
-}
-#header p {
-	margin:0px;
-	font-size:70pt;
-	line-height: 1.2;
 }
 .contact {
 	padding: 1.5em 0;
