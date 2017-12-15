@@ -1,6 +1,202 @@
-<head>
-<title>Abdu Abohalima</title>
-</head>
-<body>
-<h1> the website will be up soon ... </h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Abdu Abohalima </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Latest compiled and minified CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- Emojis :) -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+		<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+
+		<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+        <link rel="stylesheet" href="static/css/extra.css">
+	</head>
+	<body id="top">
+		<script>
+			$(document).ready(function () {
+				var path = window.location.pathname;
+				if (path=="/") {
+					path = "header";
+				};
+				panel(path);
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 500) {
+						$('.scrollup').fadeIn();
+					} else {
+						$('.scrollup').fadeOut();
+					};
+				});
+				$('.scrollup').click(function () {
+					$("html, body").animate({scrollTop: 0 }, 60);
+					return false;
+				});
+
+			});
+			function panel(layer){
+				$(".layer").hide(); // reset zIndex on all .pin elements
+				$('#'+layer).fadeIn("slow", "linear");
+				$(".collapse").collapse("hide");
+			    //$(".content").css('background-image', "url('static/css/images/"+layer+".jpg')");
+				if (layer == "research" || layer == "work") {
+					$('#job').fadeIn("slow", "linear");
+				};
+			};
+		</script>
+		<!-- Menu -->
+		<nav class="navbar navbar-fixed-top" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pills" style="width:100%;">
+					<span class="glyphicon glyphicon-menu-hamburger"><strong> Menu</strong></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse " id="pills">
+				<ul class="nav nav-inverse nav-pills nav-justified">
+					<li><a name="header" onclick="panel('header')"><i class="fas fa-home fa-lg"></i> Welcome</a></li>
+					<li><a name="about" onclick="panel('about')"><i class="fas fa-child fa-lg"></i> Me</a></li>
+					<li><a name="job" onclick="panel('job')" ><i class="fas fa-rocket fa-lg"></i> Research/Work</a></li>
+					<li><a name="papers" onclick="panel('papers')" ><i class="far fa-file-alt fa-lg"></i> Publications</a></li>
+					<li><a name="resume" onclick="panel('resume')"><i class="far fa-list-alt fa-lg"></i> Resume</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Content -->
+		<div class="col-xs-10 col-xs-offset-1 content">
+
+			<!-- Header -->
+			<div class="layer box" id="header" style="margin:0;font-family:'Just Another Hand', Helvetica, sans-serif;">
+				<!-- Info -->
+				<h2 style="font-family: 'Lobster', Sans-serif;">Hey there, Welcome to my virtual home.<br>You can see my real home in the background, isn't it beautiful?</h2><br style="clear:both;">
+				<img id="photo" src="static/css/images/me.jpg" class="" alt="ME">
+				<h3 style="font-size: 40pt;">My name is</h3><p>Abdalrahman Abohalima</p>
+				<h3 style="margin-top:0;"><span style="font-size:35px">people call me</span> <strong style="margin-left:.1em;font: 30pt 'Merienda One', Helvetica, sans-serif"> Abdu</strong></h3>
+				<!-- Contact -->
+				<div class="container-fluid text-center contact">
+					<a href="https://github.com/abdu13/"><span class="fa-stack fa-fw fa-2x"><i class="fab fa-github fa-stack-1x"></i><i class="far fa-circle fa-stack-2x"></i></span></a>
+					<a href="mailto:abdu.abohalima@gmail.com"><span class="fa-stack fa-fw fa-2x"><i class="far fa-envelope-open fa-stack-1x"></i><i class="far fa-circle fa-stack-2x"></i></span></a>
+					<a href="https://linkedin.com/in/abduabohalima/"><span class="fa-stack fa-fw fa-2x"><i class="fab fa-linkedin-in fa-stack-1x"></i><i class="far fa-circle fa-stack-2x"></i></span></a>
+				</div>
+
+				<!-- Quote -->
+				<div class="center-block" id="quote">
+				<blockquote class="blockquote-reverse center-block">
+					<h3 style="font-size:30pt;"> <i>Not All Those Who <strong>WANDER</strong> Are Lost</i> </h3>
+					<footer> J. R. R. Tolkien </footer>
+				</blockquote></div>
+			</div>
+			<!-- end Header -->
+			<!-- About -->
+			<div id="about" class="layer box">
+				<div class="jumbotron text-center title"> 	
+					<h2> The story of me!</h2><hr>
+					<p class="text-justify"> I go where life takes me, I'm neutral when it comes to preferences and expectations. I always hope for the best, but I don't resist what is for what could be. My <b>Motto</b>, <b><em><q>The destination is the journey</q></em></b> helps me live now not else where in time or space. With this methodology and a happy-go-lucky kind of attitude, I always end up where I need to be. I sometimes think of plans but I don't try to enforce them or hold onto them. Life has its way of being and it's best not to resist it. My plans are more like imagining different scenarios for how things may turn out. I look forward to the unknown, it gives me motive.</p>
+				</div>
+				<!-- About content -->
+				<div class="jumbotron">
+					<p>This is the version of me that I see, you might not get to see me exactly the same way "which is totally normal". Here's a quote from the book paper towns that explains this a bit,</p><blockquote class="indent"><p>“And its only that time that we see one another, because we see out of ourselves through our cracks and into others through theirs. When did we see each other face-to-face? Not until you saw into my cracks and I saw into yours. Before that, we were just looking at ideas of each other, like looking at your window shade but never seeing inside. But once the vessel cracks, the light can get in. The light can get out.”</p><footer> John Green, Paper Towns </footer></blockquote>
+					<p>Most of the time we draw an image of a person and that's what see, an image that probably doesn't represent the real person. The reason i say this is that we all have our biases and prejudices "only the wise and conscious are not controlled by these". It's only when we look through ourselves into the other that we get to see the real being we are interacting with. Unless I'm truly honest with myself, the story of me would be affected by the same biases. I would be only telling you of the image that I drew of myself and perceive as the real me. Let me try and tell you a little about the real me that resides within. Maybe when you meet me sometime somewhere it'll help you see the real me, and me see the real you! The ones behind the masks and appearances.</p>
+					<p> In that spirit, let's first start with the Name, apparently that's how we as humans introduce ourselves. Don't believe me? Check under my picture and you'll see what I mean. The first label we stick to a person is that which they where given by their parents, as if we don't have enough labels going around. Nevertheless, I'll shortly explain my name. First reflect on this,</p><blockquote class="indent"><p><q>What's in a name? That which we call a rose, by any other name would smell as sweet.</q></p><footer><cite>William Shakespeare, Romeo and Juliet </cite></footer></blockquote>
+					<p><u><strong> My given name:</strong></u></p><p class="indent"> It's a two syllabus Arabic/Islamic name. Abd-Alrahman, meaning <q><em>The worshiper of the most Gracious</em></q>. <em>Abd-</em> means a worshiper and <em> Alrahman</em> is one of the names of God in the Quran. Growing up family and friends call me <b><em>Abdu</em><b>, which is what I use in general.</p><hr>
+					<p> Now that we've got the name out of the way, let's go a step deeper. You might be wondering about that nonsense on the top of this page, let me try to explain it. There's a method to my madness, might take a while to see it. Trust me it's there! I'll try to make it clear, at least as clear as I can get using only words.</p>
+					<p> <b>Me is different!</b> You probably guessed "assumed" that by now! It's true, we're each different but yet the same. Huh? Crazy I know. You and I we are the same, but our perception of this world is what sets us apart. This difference is what makes us unique. There is no one way of perceiving the world. Yes there are some fundamental facts, the ones we build science upon. But the rest is subjective to a bunch of factors. Take words for example, they might seem objective! A word is like a tree, has a root meaning that's mostly buried underground, with loads of other meanings branching out from it. No one being is superior to the other, just different within the same level. I see myself and all the Universe as one! On a fundamental level we all exist, we all are and that's enough. The Universe outside is merely a reflection of you and I. Or as Rumi puts it,</p>
+					<blockquote class="indent">
+						<p> <q>Do you know what you are?<br>
+							You are a manuscript of a divine letter,<br>
+							You are a mirror reflecting a noble face,<br>
+							This universe is not outside of you,<br>
+							Look inside yourself;<br>
+							everything that you want,<br>
+							You are already that.</q></p>
+						<footer> Rumi, A poem from sometime written somewhere </footer>
+					</blockquote>
+	
+				</div>
+				<!-- end About content -->
+			</div>
+			<!-- end About-->
+			<!-- Job-->
+			<div id="job" class="layer">
+				<div class="box text-center title">
+					<h2> What I do with my time!</h2>
+				</div>
+				<br class="break">
+				<!-- Job content -->
+				<a name="research" onclick="panel('research')"><div class="box text-center title tag"><h2>Research</h2></div></a>
+				<a name="work" onclick="panel('work')"><div class="box text-center title tag"><h2>Work</h2></div></a>
+				<br class="break"><br class="break">
+			</div>
+			<!-- end Job-->
+			<!-- Research -->
+			<div id="research" class="layer box">
+				<div class="jumbotron text-center title"> 	
+					<h2> My research!</h2>
+				</div>
+				<!-- Research content -->
+				<div class="jumbotron">
+					<p> For my masters I've studied some of the oldest stars discovered so far. These stars belong to the central regions of the galaxy and have on average 100 to 1000 times less heavy elements compared to the Sun. For my project I got to measure how abundant 4 heavy elements are in these stars. The elements are strontium (Sr), ytrium (Y), barium (Ba) and europium (Eu). These elements form through a process termed the neutron capture process. The point of the project is to get a better picture of how these elements are formed in the early Universe. Stars in general act as fossil records to a great degree. If one can measure the abundances of elements in a star's atmosphere, we can then get a detailed picture of the gas cloud this star formed from. That's what we did with these old stars. I measured the abundances of these elements and compared them to theoretical models of how the first stars might've died. From this we can set constraints on the nature of the first stars, how massive they were? how did they die? and what elements did they form more efficiently?</p>
+					<p> My supervisor <a href="http://www.astro.lu.se/~louise/" target="blank">Louise Howes</a> is studying the light elements in these stars. Having a detailed understanding of the chemistry of the oldest stars would get us a step closer to understanding the nature of the first stars that ever formed in the Universe. Those stars changed the Universe from a dark featureless one to the marvelous creation we observe today.</p>
+				</div>
+				<!-- end Research content -->
+			</div>
+			<!-- end Research-->
+			<!-- Work -->
+			<div id="work" class="layer box">
+				<div class="jumbotron text-center title"> 	
+					<h2> To be added soon! </h2>
+				</div>
+				<!-- end Work content -->
+			</div>
+			<!-- end Work-->
+			<!-- Papers -->
+			<div id="papers" class="layer box">
+				<div class="jumbotron text-center title"> 	
+					<h2> Publications! </h2>
+				</div>
+				<!-- Papers content -->
+				<div class="jumbotron">
+					<div class="container-fluid">
+						<p> Here you can find a list of my publications. So far I have only one submitted paper. Hopefully more will get out there in the near future.</p><p>You can find a list <a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST&db_key=PRE&qform=AST&arxiv_sel=astro-ph&arxiv_sel=cond-mat&arxiv_sel=cs&arxiv_sel=gr-qc&arxiv_sel=hep-ex&arxiv_sel=hep-lat&arxiv_sel=hep-ph&arxiv_sel=hep-th&arxiv_sel=math&arxiv_sel=math-ph&arxiv_sel=nlin&arxiv_sel=nucl-ex&arxiv_sel=nucl-th&arxiv_sel=physics&arxiv_sel=quant-ph&arxiv_sel=q-bio&sim_query=YES&ned_query=YES&adsobj_query=YES&aut_logic=OR&obj_logic=OR&author=%5Eabohalima%0D%0A&object=&start_mon=&start_year=&end_mon=&end_year=&ttl_logic=OR&title=&txt_logic=OR&text=&nr_to_return=200&start_nr=1&jou_pick=ALL&ref_stems=&data_and=ALL&group_and=ALL&start_entry_day=&start_entry_mon=&start_entry_year=&end_entry_day=&end_entry_mon=&end_entry_year=&min_score=&sort=SCORE&data_type=SHORT&aut_syn=YES&ttl_syn=YES&txt_syn=YES&aut_wt=1.0&obj_wt=1.0&ttl_wt=0.3&txt_wt=3.0&aut_wgt=YES&obj_wgt=YES&ttl_wgt=YES&txt_wgt=YES&ttl_sco=YES&txt_sco=YES&version=1">Here</a> on ADS.</p></div>
+				</div>
+				<!-- end Papers content -->
+			</div>
+			<!-- end Papers-->
+			<!-- Resume -->
+			<div id="resume" class="layer box" style="overflow: none;">
+				<div class="jumbotron text-center title"> 	
+					<h2> My Resume!</h2><hr>
+					<p>My academic resume, for an industry oriented resume please <a name="work-resume"  onclick="panel('work-resume')">click here</a>.</p>
+				</div>
+				<div class="embed-container">
+					<object data="/static/cv.pdf#pagemode=none&zoom=page-width" type="application/pdf">
+				   <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/cv.pdf">Download PDF</a>.</p>
+					</object>
+				</div>
+			</div>
+			<div id="work-resume" class="layer box" style="overflow: none;">
+				<div class="jumbotron text-center title"> 	
+					<h2> My Resume!</h2>
+				</div>
+				<div class="embed-container" style="top:6em;">
+					<object data="/static/resume.pdf#pagemode=none&zoom=page-width" type="application/pdf">
+				   <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/resume.pdf">Download PDF</a>.</p>
+					</object>
+				</div>
+			</div>
+			<!-- end Resume -->
+		</div>
+		<!-- end content -->
+		<!-- scroll to top -->
+		<a href="#" class="scrollup btn btn-default btn-lg"><span class="glyphicon glyphicon-chevron-up"  aria-hidden="true"></span><p>Top</p></a>
+	</body>
+</html>
